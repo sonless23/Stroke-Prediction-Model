@@ -26,8 +26,9 @@ For the final prediction, a lower threshold probability was set and used to pred
 The data set has a high degree of class imbalance in the target variable, hence using models like the RandomForest Classifier (which i tested first) produce results with very high accuracy but basically no positive recall and precision. In healthcare, as in this case, accuracy can be a misleading metric to use in assessing model performance. Due to the high class imbalance, the model could basically predict the majority class ('no stroke' in this case) and still get a high accuracy. This model would be basically useless though because what is needed is for it to predict the positive class ('stroke') so that clinical decisions could be taken to prevent it. Hence, precision and recall must be maximized for, even if it is at the expense of accuracy.
 At the end, i chose the Logistic Regressor and manually reset the threshold probability to predict a positive class. This improved the positive precision and recall of the model at the expense of accuracy (which is really not of much importance here).
 
-### Model Evaluation
+### Model Evaluation and Further Improvemnets
 Model was evaluated using a classification report including precision, recall, etc.
+Further improvement could be made by getting more data, and maybe by adding more features based on domain knowledge.
 
 # How to Use
 1. Clone the repository
